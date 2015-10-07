@@ -99,9 +99,6 @@
 //    var _color = color;
 //    var _height = height;
 //    var _length = length;
-//    this.getType = function (t) {
-//        _type = t;
-//    }
 //    this.getType = function () {
 //        return _type;
 //    }
@@ -189,29 +186,29 @@
 
 //????????????????????????????????????????????
 
-var Vehicle = function (make, model, totalMiles, lastOilChange) {
-    this.make = make;
-    this.model = model;
-    this.totalMiles = 0;
-    this.drivenMiles = 0;
-    this.type = "";
-    this.lastOilChange = 0;
-};
-
-Vehicle.prototype.drive = function (miles) {
-    this.drivenMiles += miles;
-    return this;
-};
-
-Vehicle.prototype.checkOil = function () {
-    if (this.totalMiles - this.lastOilChange + this.miles <= 3000) {
-        window.console.log("You need an oil change.");
-    } else {
-        return this;
-    }
-};
-
-var newCar = new Vehicle("Honda", "Fit", 150050, 150000);
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = 0;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//    this.lastOilChange = 0;
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+//
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.miles <= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//var newCar = new Vehicle("Honda", "Fit", 150050, 150000);
 //newCar.drive(2000);
 //newCar.checkOil();
 
@@ -219,8 +216,8 @@ var newCar = new Vehicle("Honda", "Fit", 150050, 150000);
 
 //var newCar.drive(2000) = new Vehicle("Honda", "Fit", 150050, 150000);
 
-window.console.log(newCar.drive(2000));
-window.console.log(newCar.checkOil());
+//window.console.log(newCar.drive(2000));
+//window.console.log(newCar.checkOil());
 
 //totalMiles is what you've accumulated to a certain point. For instance, I have 150,000 miles on my car currently. 
 //drivenMiles is the amount of miles that you've driven since the last oil change. I've driven 10,000 miles since my last oil change. This value is what you'll pass in when you call the .drive() method.
@@ -278,32 +275,13 @@ window.console.log(newCar.checkOil());
 //Keep track of which books you read and which books you want to read! Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet). Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien". Then, use a conditional to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.' Make sure your object contains at least 5 books.
 
 
-//var book1 = [];
-//book1["title"] = "The Hobbit";
-//book1["author"] = "J.R.R. Tolkien";
-//book1["alreadyRead"] = true;
+//var booklist = [];
+//booklist[0] = {title: "The Hobbit", author: "J.R.R. Tolkien", alreadyRead: true};
+//booklist[1] = {title: "Neuromancer", author: "William Gibson", alreadyRead: true};
+//booklist[2] = {title: "A Separate Peace", author: "John Knowles", alreadyRead: false};
+//booklist[3] = {title: "Ready Player One", author: "Ernest Cline", alreadyRead: true};
+//booklist[4] = {title: "Island Beneath the Sea", author: "Isabel Allende", alreadyRead: false};
 //
-//var book2 = [];
-//book2["title"] = "Neuromancer";
-//book2["author"] = "William Gibson";
-//book2["alreadyRead"] = true;
-//
-//var book3 = [];
-//book3["title"] = "Island Beneath the Sea";
-//book3["author"] = "Isabel Allende";
-//book3["alreadyRead"] = false;
-//
-//var book4 = [];
-//book4["title"] = "Ready Player One";
-//book4["author"] = "Ernest Cline";
-//book4["alreadyRead"] = true;
-//
-//var book5 = [];
-//book5["title"] = "A Separate Peace";
-//book5["author"] = "John Knowles";
-//book5["alreadyRead"] = false;
-//
-//var booklist = [book1, book2, book3, book4, book5];
 //for (var i = 0; i < booklist.length; i++) {
 //    if (booklist[i]["alreadyRead"] === true) {
 //    window.console.log("You already read " + booklist[i]["title"] + " by " + booklist[i]["author"]);
@@ -314,60 +292,29 @@ window.console.log(newCar.checkOil());
 //    }
 
 
-//var booklist = [["The Hobbit", "J.R.R. Tolkien", alreadyRead = true], ["Neuromancer", "William Gibson", alreadyRead = true],  ["Ready Player One", "Ernest Cline", alreadyRead = true],  ["A Separate Peace", "John Knowles", alreadyRead = false],  ["Island Beneath the Sea", "Isabel Allende", alreadyRead = false]];
-//
-//for (var i = 0; i < booklist.length; i++) {
-//    for (var j = 0; j < booklist[i].length; j++) {
-//        if (booklist[i]["alreadyRead"] === true {
-//        window.console.log("You already read " + booklist[i][j]);
-//    }
-//   else {
-//    window.console.log("You still need to read " + booklist[i][j]);
-//     }
-//    }
+// Fill in the Blanks (10 points)
+// Fill in the blanks to make this program work.
 
 
-//Fill in the Blanks (10 points)
-//Fill in the blanks to make this program work. 
+(function() {
+    var person = {
+        buy: function () {
+            window.console.log("I'm rich");
+        }
+    };
 
-//(function () {
-//    var person = {
-//    window.console.log("I'm rich");
-//    };
-//
-//    var car = {
-//    window.console.log("vroom, vroom");
-//    };
-//
-//    // print vroom vroom
-//    car.drive();
-//
-//    // print 'I'm rich'
-//    if (car.price > 100000) {
-//        person.buy(car);
-//    }
-//}());
-//
-//(function(num1, num2) {
-//    console.log(num1 + num2);
-//}(1, 2));
+    var car = {
+        price: 200000,
+        drive: function () {
+            window.console.log("vroom vroom");
+        }
+    };
 
+    // print vroom vroom
+    car.drive();
 
-//(function() {
-//    var person = {
-//        // add code here
-//    };
-//
-//    var car = {
-//        // add code here
-//    };
-//
-//    // print vroom vroom
-//    car.drive();
-//
-//    // print 'I'm rich'
-//    if (car.price > 100000) {
-//        person.buy(car);
-//    }
-//}()); 
-
+    // print 'I'm rich'
+    if (car.price > 100000) {
+        person.buy(car);
+    }
+}());
