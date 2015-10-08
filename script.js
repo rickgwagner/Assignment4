@@ -177,31 +177,28 @@
 //};
 //
 //Vehicle.prototype.drive = function (miles) {
-//    this.miles += miles;
-//    this.drivenMiles = this.miles;
+//    this.drivenMiles += miles;
 //    return this;
 //};
 
 //14. Now create a public method called checkOil(). Within this method, check to see if the total miles minus the last oil change plus the driven miles are less than or equal to 3000. If they are, return a message to the user that they need an oil change. Otherwise, return the method (return this).
 
-//????????????????????????????????????????????
-
 //var Vehicle = function (make, model, totalMiles, lastOilChange) {
 //    this.make = make;
 //    this.model = model;
-//    this.totalMiles = 0;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
 //    this.drivenMiles = 0;
 //    this.type = "";
-//    this.lastOilChange = 0;
 //};
 //
 //Vehicle.prototype.drive = function (miles) {
 //    this.drivenMiles += miles;
 //    return this;
 //};
-//
+// 
 //Vehicle.prototype.checkOil = function () {
-//    if (this.totalMiles - this.lastOilChange + this.miles <= 3000) {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
 //        window.console.log("You need an oil change.");
 //    } else {
 //        return this;
@@ -209,34 +206,219 @@
 //};
 //
 //var newCar = new Vehicle("Honda", "Fit", 150050, 150000);
-//newCar.drive(2000);
-//newCar.checkOil();
-
-//window.console.log(newCar.drive(155000).checkOil()); 
-
-//var newCar.drive(2000) = new Vehicle("Honda", "Fit", 150050, 150000);
-
-//window.console.log(newCar.drive(2000));
+//newCar.drive(4000);
+//
 //window.console.log(newCar.checkOil());
-
-//totalMiles is what you've accumulated to a certain point. For instance, I have 150,000 miles on my car currently. 
-//drivenMiles is the amount of miles that you've driven since the last oil change. I've driven 10,000 miles since my last oil change. This value is what you'll pass in when you call the .drive() method.
-//totalMiles - lastOilChange + drivenMiles...is that value greater than 3,000?
-
-//totalMiles - lastOilChange + drivenMiles...is that value greater than 3,000
-
 
 //15. Now create a new sub class called Car that accepts one parameter for the amount of doors that the car has. 
 
+
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+// 
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//Vehicle.prototype.car = function (doorCount) {
+//};
+
+
 //16. Within the new Car class, initialize a public property called doorCount and set it equal to the argument.
+
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+// 
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//Vehicle.prototype.car = function (doorCount) {
+//this.doorCount = doorCount;
+//};
+
 
 //17. Within the Car class use a conditional to check and see if the door count is greater than 2. If it is, set the type property to Sedan. Otherwise, set it to coupe.
 
-//18. Now, make sure that the Car class inherits from the Vehicle base class. Use this opportunity to pass in the make, model, total miles, and last oil change values into the Vehicle’s constructor. 
+
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+// 
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//Vehicle.prototype.car = function (doorCount) {
+//    if (doorCount > 2) {
+//        this.type = "Sedan";
+//        return this;
+//    } else {
+//        this.type = "Coupe";
+//        return this;
+//    }
+//};
+//
+//var newCar = new Vehicle(2);
+//
+//window.console.log(Vehicle.prototype.car());
+
+//18. Now, make sure that the Car class inherits from the Vehicle base class. Use this opportunity to pass in the make, model, total miles, and last oil change values into the Vehicle’s constructor.
+
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+// 
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//Vehicle.prototype.car = function (doorCount) {
+//    if (doorCount > 2) {
+//        this.type = "Sedan";
+//        return this;
+//    } else {
+//        this.type = "Coupe";
+//        return this;
+//    }
+//};
+//
+//var newCar = new Vehicle("Honda", "Fit", 150050, 150000);
 
 //19. Then, create a new instance of the Car class and pass in the number of doors that the car has into the Car’s constructor.
 
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+// 
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//Vehicle.prototype.car = function (doorCount) {
+//    if (doorCount > 2) {
+//        this.type = "Sedan";
+//        return this;
+//    } else {
+//        this.type = "Coupe";
+//        return this;
+//    }
+//};
+//
+//var newCar = new Vehicle(2);
+
+
 //20. Finally, using method chaining, call the drive() method of the car object, passing in a numeric value as a parameter. At the same time, call the checkOil() method. Display the results in the console window. You will either get a message indicating your car needs an oil change or you will get the object hierarchy. 
+
+
+//var Vehicle = function (make, model, totalMiles, lastOilChange) {
+//    this.make = make;
+//    this.model = model;
+//    this.totalMiles = totalMiles;
+//    this.lastOilChange = lastOilChange;
+//    this.drivenMiles = 0;
+//    this.type = "";
+//};
+//
+//Vehicle.prototype.drive = function (miles) {
+//    this.drivenMiles += miles;
+//    return this;
+//};
+// 
+//Vehicle.prototype.checkOil = function () {
+//    if (this.totalMiles - this.lastOilChange + this.drivenMiles >= 3000) {
+//        window.console.log("You need an oil change.");
+//    } else {
+//        return this;
+//    }
+//};
+//
+//Vehicle.prototype.car = function (doorCount) {
+//    if (doorCount > 2) {
+//        this.type = "Sedan";
+//        return this;
+//    } else {
+//        this.type = "Coupe";
+//        return this;
+//    }
+//};
+//
+//var newCar = new Vehicle("Honda", "Fit", 150050, 150000);
+//
+//window.console.log(newCar.drive(4000).checkOil());
+
 
 
 //The Recipe Card (10 points)
@@ -267,8 +449,7 @@
 //};
 //}
 //
-//var Guacamole = new Recipe("Guacamole", 4, ["3 Avocados", "1 Lime", "1 Teaspoon Salt", "1/2 Cup Onion", "3 Tablespoons Cilantro",  "2 Diced Tomatoes", "1 Teaspoon Garlic", "1 Pinch Ground Pepper"]);
-
+//var Dip = new Recipe("Blue Cheese Pecan Dip", 4, ["1/4 Cup Toasted Pecans", "1/2 Pound Cream Cheese", "4 Tablespoons Blue Cheese", "1/2 Teaspoon Salt"]);
 
 //The Reading List (10 points)
 //
@@ -296,25 +477,25 @@
 // Fill in the blanks to make this program work.
 
 
-(function() {
-    var person = {
-        buy: function () {
-            window.console.log("I'm rich");
-        }
-    };
-
-    var car = {
-        price: 200000,
-        drive: function () {
-            window.console.log("vroom vroom");
-        }
-    };
-
-    // print vroom vroom
-    car.drive();
-
-    // print 'I'm rich'
-    if (car.price > 100000) {
-        person.buy(car);
-    }
-}());
+//(function() {
+//    var person = {
+//        buy: function () {
+//            window.console.log("I'm rich");
+//        }
+//    };
+//
+//    var car = {
+//        price: 200000,
+//        drive: function () {
+//            window.console.log("vroom vroom");
+//        }
+//    };
+//
+//    // print vroom vroom
+//    car.drive();
+//
+//    // print 'I'm rich'
+//    if (car.price > 100000) {
+//        person.buy(car);
+//    }
+//}());
